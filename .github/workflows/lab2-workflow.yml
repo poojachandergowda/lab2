@@ -22,7 +22,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Printing Custom Message
-        run: echo ${{ inputs.custom_message }}
+        run: |
+          echo ${{ inputs.custom_message }}
+          echo ${{ inputs.run_job }}
       - name: Printing run-job boolean value
         if: ${{ inputs.run-job == true}} 
         run: echo ${{ inputs.run_job }}
